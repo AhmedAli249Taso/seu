@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEU Portal - Dashboard</title>
+    <link rel="stylesheet" href="seu.css">
+</head>
+<body class="dashboard-mode">
+
+    <nav class="dash-navbar">
+        <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+        <span class="nav-center">Dashboard</span>
+        <a href="personal-info.html">
+            <img src="seu-dash-logo.png.jpg" alt="User Profile" class="seu-dash-logo">
+        </a>
+    </nav>
+
+    <div class="sidebar-overlay hidden" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <aside class="sidebar" id="sidebarMenu">
+        <div class="sidebar-user-header">
+            <div class="user-info-block">
+                <img src="img.jfif" alt="User Avatar" class="avatar-placeholder">
+                <div class="user-names">
+                    <span class="user-full-name">Ahmed Hassan Ismail</span>
+                    <span class="user-last-name">Adam</span>
+                </div>
+            </div>
+            <button class="close-sidebar-btn" onclick="toggleSidebar()">×</button>
+        </div>
+
+        <div class="faculty-badge">Medicine (NEW)</div>
+
+        <ul class="sidebar-menu-list">
+            <li class="menu-item active" onclick="location.href='dashboard.html'">
+                <span class="menu-icon">⚃</span> Dashboard
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">📅</span> Calendar
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">📝</span> E-Chancellery
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">💻</span> LMS <span class="notif-badge">0</span>
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">📇</span> Program
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">🪪</span> Student card
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">📊</span> Table
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">⚙️</span> Academic registration
+            </li>
+
+            <li class="menu-divider"></li>
+
+            <li class="menu-item">
+                <span class="menu-icon">🏛</span> MIT
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">📖</span> Library
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">⏱</span> Survey
+            </li>
+
+            <li class="menu-divider"></li>
+
+            <li class="menu-item">
+                <span class="menu-icon">🔔</span> Notifications and commands <span class="notif-badge">0</span>
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">💳</span> Finances
+            </li>
+            <li class="menu-item" onclick="location.href='personal-info.html'">
+                <span class="menu-icon">👤</span> Personal info. Doc. Logs
+            </li>
+
+            <li class="menu-divider"></li>
+        </ul>
+
+        <div class="sidebar-lang-pill-container">
+            <button class="lang-pill-btn">
+                <img src="https://flagcdn.com/ge.svg" alt="Georgia Flag" class="flag-pill-img"> Georgia
+            </button>
+            <button class="lang-pill-btn active">
+                <img src="https://flagcdn.com/gb.svg" alt="UK Flag" class="flag-pill-img"> English
+            </button>
+        </div>
+    </aside>
+
+    <main class="dash-grid">
+        <div class="dash-card grid-col-2">
+            <div class="card-header">
+                <span class="card-title text-green">Table</span>
+                <div class="card-nav-btns">
+                    <button class="nav-arrow">‹</button>
+                    <button class="nav-arrow">›</button>
+                </div>
+            </div>
+            <div class="timetable-content">
+                <div class="time-row">
+                    <span class="time-badge">13:00</span>
+                    <span class="day-badge text-green">Monday</span>
+                </div>
+                <h3 class="subject-title">Research Skills I (Reasoning)</h3>
+                <p class="prof-name">👤 inga faliani-ditrixi</p>
+                <p class="session-type"><strong>Lecture</strong></p>
+                <p class="room-info">📍 4-10 (აუდიტორიაში)</p>
+                <p class="duration">🕒 1 Academic hours</p>
+            </div>
+        </div>
+
+        <div class="dash-card">
+            <div class="card-header">
+                <span class="card-title">Balance</span>
+            </div>
+            <div class="balance-content">
+                <h2 class="balance-amount">1.73</h2>
+                <p class="currency">USD</p>
+                <div class="debt-section">
+                    <p class="debt-title">Debt</p>
+                    <h3 class="debt-amount text-green">0 USD</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="dash-card">
+            <div class="card-header">
+                <span class="card-title text-green">Latest commands</span>
+            </div>
+            <div class="command-box">
+                <span class="cmd-id">1734</span>
+                <p class="cmd-text">Active - რექტორის ბრძانებით ჩარიცხვა</p>
+                <span class="cmd-date">2025-12-18</span>
+            </div>
+            <div class="card-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+
+        <div class="dash-card grid-col-2">
+            <div class="card-header">
+                <span class="card-title text-green">Messages</span>
+            </div>
+            <table class="messages-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>5761536</td>
+                        <td class="geo-text">ლექტორმა დაამატა ახალი...</td>
+                    </tr>
+                    <tr class="bg-highlight">
+                        <td>5911307</td>
+                        <td class="geo-text">ლექტორმა დაამატა ახალი დავ...</td>
+                    </tr>
+                    <tr>
+                        <td>5932021</td>
+                        <td class="geo-text">ლექტორმა დაამატა ახალი დავ...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <div class="floating-chat-btn">💬</div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebarMenu');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

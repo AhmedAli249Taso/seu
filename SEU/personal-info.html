@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEU Portal - Personal Info</title>
+    <link rel="stylesheet" href="seu.css">
+</head>
+<body class="dashboard-mode">
+
+    <nav class="dash-navbar">
+        <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+        <span class="nav-center">Personal Info</span>
+        <img src="seu-dash-logo.png.jpg" alt="User Profile" class="seu-dash-logo">
+    </nav>
+
+    <div class="sidebar-overlay hidden" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <aside class="sidebar" id="sidebarMenu">
+        <div class="sidebar-user-header">
+            <div class="user-info-block">
+                <img src="img.jfif" alt="User Avatar" class="avatar-placeholder">
+                <div class="user-names">
+                    <span class="user-full-name">Ahmed Hassan Ismail</span>
+                    <span class="user-last-name">Adam</span>
+                </div>
+            </div>
+            <button class="close-sidebar-btn" onclick="toggleSidebar()">×</button>
+        </div>
+
+        <div class="faculty-badge">Medicine (NEW)</div>
+
+        <ul class="sidebar-menu-list">
+            <li class="menu-item" onclick="location.href='dashboard.html'">
+                <span class="menu-icon">⚃</span> Dashboard
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">📅</span> Calendar
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">📝</span> E-Chancellery
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">💻</span> LMS <span class="notif-badge">0</span>
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">📇</span> Program
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">🪪</span> Student card
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">📊</span> Table
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">⚙️</span> Academic registration
+            </li>
+
+            <li class="menu-divider"></li>
+
+            <li class="menu-item">
+                <span class="menu-icon">🏛</span> MIT
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">📖</span> Library
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">⏱</span> Survey
+            </li>
+
+            <li class="menu-divider"></li>
+
+            <li class="menu-item">
+                <span class="menu-icon">🔔</span> Notifications and commands <span class="notif-badge">0</span>
+            </li>
+            <li class="menu-item">
+                <span class="menu-icon">💳</span> Finances
+            </li>
+            <li class="menu-item active" onclick="location.href='personal-info.html'">
+                <span class="menu-icon">👤</span> Personal info. Doc. Logs
+            </li>
+        </ul>
+
+        <div class="sidebar-lang-pill-container">
+            <button class="lang-pill-btn">
+                <img src="https://flagcdn.com/ge.svg" alt="Georgia Flag" class="flag-pill-img"> Georgia
+            </button>
+            <button class="lang-pill-btn active">
+                <img src="https://flagcdn.com/gb.svg" alt="UK Flag" class="flag-pill-img"> English
+            </button>
+        </div>
+    </aside>
+
+    <div class="personal-info-header">
+        <div class="profile-img-container">
+            <img src="img.jfif" alt="Ahmed Hassan" class="profile-big-avatar">
+            <div class="status-dot"></div>
+        </div>
+        <h2>Ahmed Hassan Ismail Adam</h2>
+        <div class="profile-id-sub">ID 48048 / P14173293</div>
+        
+        <div class="profile-faculty-title">Medicine</div>
+        
+        <div class="profile-details-row">
+            <div>
+                <div class="info-label">Email</div>
+                <div class="info-value" style="font-size: 0.85rem; text-transform: none;">AAdam2@seu.edu.ge</div>
+            </div>
+            <div>
+                <div class="info-label">Password</div>
+                <div class="info-value">123456789</div>
+            </div>
+        </div>
+        <div style="text-align: left; margin-top: 0.5rem; padding: 0 1rem;">
+            <div class="info-label">Address</div>
+            <div class="info-value" style="color: #2e3192; font-weight: 600;">Mail.seu.edu.ge, Gmail.com</div>
+        </div>
+    </div>
+
+   <div class="stats_grid">
+    
+    <div class="stat-card">
+        <div class="progress-circle">
+            <svg>
+                <circle class="bg" cx="40" cy="40" r="35"></circle>
+                <circle class="bar" cx="40" cy="40" r="35"></circle>
+            </svg>
+            <div class="circle-text">2</div>
+        </div>
+        <div class="stat-sub">Current semester</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-number">2.54</div>
+        <div class="stat-star">★</div>
+        <div class="stat-sub">GPA</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-number">22</div>
+        <div class="stat-star">★</div>
+        <div class="stat-sub">Program compatible credit</div>
+    </div>
+
+    <div class="stat-card">
+        <div class="stat-number">80 / C</div>
+        <div class="stat-star">★</div>
+        <div class="stat-sub">Average result</div>
+    </div>
+
+</div>
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebarMenu');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
